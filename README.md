@@ -49,4 +49,17 @@ To build a conceptual and interactive framework where multiple processes can com
 ---
 
 ## 📁 Project Structure
+screenshots
+1.FrameWork
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/a798c078-033a-445e-aea2-fdd38e915768" />
+2.User Interface
+<img width="1366" height="768" alt="Screenshot 2025-12-09 192316" src="https://github.com/user-attachments/assets/73782533-8290-4bdb-a0b7-1a8b2f85b6fc" />
+3.Security features
+<img width="1366" height="768" alt="Screenshot 2025-12-09 192436" src="https://github.com/user-attachments/assets/9987cfea-5e28-42e0-ad2f-f3599f95cc5e" />
+4.Message Queue and Shared Memory Simulation
+<img width="1366" height="768" alt="Screenshot 2025-12-09 192454" src="https://github.com/user-attachments/assets/6f6b0c4d-d06d-4cdc-915c-4f19a19c2b4a" />
+
+
+
+
 
