@@ -51,7 +51,7 @@ To build a conceptual and interactive framework where multiple processes can com
 ## 📁 Project Structure
 screenshots
 1.FrameWork
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/a798c078-033a-445e-aea2-fdd38e915768" />
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/a798c078-033a-445e-aea2-fdd38e915768" />
 2.User Interface
 <img width="1366" height="768" alt="Screenshot 2025-12-09 192316" src="https://github.com/user-attachments/assets/73782533-8290-4bdb-a0b7-1a8b2f85b6fc" />
 3.Security features
