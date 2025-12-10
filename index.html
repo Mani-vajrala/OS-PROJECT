@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprehensive IPC Framework</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<header class="site-header">
+    <div class="container header-content">
+        <h1>Comprehensive IPC Framework</h1>
+        <p>Using Pipes, Message Queues, Shared Memory & Security Mechanisms</p>
+        
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="ipc-methods.html">IPC Methods</a>
+            <a href="security.html">Security Features</a>
+            <a href="framework-flow.html">Framework Flow</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- Overview -->
+    <section id="overview" class="section">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p>
+                This project demonstrates a <strong>comprehensive IPC Framework</strong> using:
+                <strong>Pipes</strong>, <strong>Message Queues</strong> & <strong>Shared Memory</strong>.
+            </p>
+            <p>
+                It helps show how processes communicate efficiently while protecting
+                <strong>Confidentiality</strong>, <strong>Integrity</strong> & <strong>Availability</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- IPC Methods -->
+    <section id="methods" class="section section-alt">
+        <div class="container">
+            <h2>IPC Methods Used</h2>
+
+            <div class="card-grid">
+                <article class="card glass">
+                    <h3>Pipes</h3>
+                    <p>Simple and fast unidirectional channel for related processes.</p>
+                </article>
+
+                <article class="card glass">
+                    <h3>Message Queues</h3>
+                    <p>FIFO message passing with priority support.</p>
+                </article>
+
+                <article class="card glass">
+                    <h3>Shared Memory</h3>
+                    <p>Fastest communication for frequent read/write operations.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conceptual Diagram -->
+    <section class="section">
+        <div class="container">
+            <h2>Framework Flow (Conceptual)</h2>
+            <p>A simplified architecture of IPC mechanisms between processes.</p>
+
+            <div style="text-align:center; margin:15px 0;">
+                <img src="framework_flow_diagram.png" alt="IPC Architecture Diagram"
+                    style="width:60%; max-width:480px; border-radius:12px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Comparison -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Quick Comparison</h2>
+            <p>Select a method to know its summary:</p>
+
+            <div class="button-group">
+                <button class="tab-btn" data-target="pipes">Pipes</button>
+                <button class="tab-btn" data-target="queues">Message Queues</button>
+                <button class="tab-btn" data-target="shared">Shared Memory</button>
+            </div>
+
+            <div id="tab-content" class="tab-content">
+                <p>Select a method above to view details.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>Mini Project: IPC Framework Simulation — Group Work</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
