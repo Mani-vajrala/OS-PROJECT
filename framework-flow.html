@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPC Simulation - Framework Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <h1>IPC Simulation (Working Demo)</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="ipc-methods.html">IPC Methods</a>
+            <a href="security.html">Security Features</a>
+            <a href="framework-flow.html" class="active">Framework Flow</a>
+        </nav>
+    </div>
+</header>
+
+<main class="section">
+    <div class="container">
+
+        <!-- ============= SECURITY CONTROL PANEL ============= -->
+        <section class="card glass">
+            <h2>Security Control Panel</h2>
+            <p class="hint">
+                Person B must authenticate with password before sending messages.<br>
+                <strong>Password:</strong> <code>1234</code>
+            </p>
+
+            <div class="security-grid">
+                <div>
+                    <label for="authPassword"><strong>Enter Password for Person B:</strong></label><br>
+                    <input type="password" id="authPassword" placeholder="Enter password 1234">
+                    <button class="btn" onclick="unlockB()">Unlock Person B</button>
+                </div>
+                <div>
+                    <p><strong>Status:</strong> 
+                        <span id="authStatus" class="status-badge status-locked">
+                            LOCKED
+                        </span>
+                    </p>
+                    <label class="toggle">
+                        <input type="checkbox" id="encryptToggle">
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-label">Encrypt messages for Queue & Shared Memory</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= TWO-PERSON CHAT (PIPE DEMO) ============= -->
+        <section class="card glass">
+            <h2>Pipe Simulation: Two-Person Communication</h2>
+            <p class="hint">
+                Acts like a full-duplex pipe: both Person A and Person B can send messages.
+                Messages also update <strong>Message Queue</strong> and <strong>Shared Memory</strong>.
+            </p>
+
+            <div id="chatWindow" class="chat-window"></div>
+            <div id="typingIndicator" class="typing-indicator"></div>
+
+            <div class="chat-input-row">
+                <div class="chat-person">
+                    <span class="avatar avatar-a">A</span>
+                    <div>
+                        <label><strong>Person A:</strong></label><br>
+                        <input type="text" id="msgA" placeholder="Type as Person A">
+                        <button class="btn" onclick="sendA()">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-row">
+                <div class="chat-person">
+                    <span class="avatar avatar-b">B</span>
+                    <div>
+                        <label><strong>Person B:</strong></label><br>
+                        <input type="text" id="msgB" placeholder="Type as Person B">
+                        <button class="btn" onclick="sendB()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============= MESSAGE QUEUE SIMULATION ============= -->
+        <section class="card glass">
+            <h2>Message Queue Simulation</h2>
+            <p class="hint">
+                FIFO behavior: first enqueued message is delivered first.
+                Chat messages also enter this queue automatically.
+            </p>
+
+            <input type="text" id="queueInput" placeholder="Enter message to enqueue manually">
+            <button class="btn" onclick="enqueueMessage()">Enqueue</button>
+            <button class="btn btn-secondary" onclick="dequeueMessage()">Dequeue</button>
+
+            <p><strong>Current Queue:</strong></p>
+            <div id="queueDisplay" class="queue-display"></div>
+
+            <p><strong>Last Delivered Message:</strong> 
+                <span id="queueOutput" class="badge"></span>
+            </p>
+        </section>
+
+        <!-- ============= SHARED MEMORY SIMULATION ============= -->
+        <section class="card glass">
+            <h2>Shared Memory Simulation</h2>
+            <p class="hint">
+                Represents a common memory segment shared between processes.
+                Chat messages update this with the <strong>encrypted length</strong>.
+            </p>
+
+            <input type="number" id="sharedInput" placeholder="Write numeric value">
+            <button class="btn" onclick="writeSharedMemory()">Write</button>
+            <button class="btn btn-secondary" onclick="incrementProcess()">Process X +</button>
+            <button class="btn btn-secondary" onclick="decrementProcess()">Process Y -</button>
+
+            <p><strong>Shared Memory Value:</strong> 
+                <span id="sharedDisplay" class="shared-value"></span>
+            </p>
+        </section>
+
+        <!-- ============= ACTIVITY LOG ============= -->
+        <section class="card glass">
+            <h2>IPC Activity Log</h2>
+            <p class="hint">Tracks every IPC operation with timestamps (Pipe, Queue, Shared Memory, Security).</p>
+            <div id="logWindow" class="log-window"></div>
+            <button class="btn btn-danger" onclick="resetSystem()">Clear All / Reset System</button>
+        </section>
+
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>© Comprehensive IPC Framework Simulation — Group Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
